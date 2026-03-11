@@ -8,10 +8,48 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
 
-    <TabControl TabStripPlacement="Bottom">
+    <TabControl TabStripPlacement="Top">
         <TabItem Header="Played Campaigns">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height=".25*"/>
+                </Grid.RowDefinitions>
+                
+                <!--<Images/>-->
+                <Image Source="/images/Survivor_portrait.png" Grid.Row="3" Grid.Column="2"/>
+                <Image Source="/Images/Rivulet_portrait.png" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
+                <Image Source="/Images/Monk_portrait.png" Grid.Row="3" Grid.Column="4"/>
+                <Image Source="/Images/Spearmaster_portrait.png" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3"/>
+                <Image Source="/Images/Hunter_portrait.png" Grid.Row="3" Grid.Column="6"/>
+                <Image Source="/Images/Saint_portrait.png" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3"/>
+                <Image Source="/Images/Gourmand_portrait.png" Grid.Row="3" Grid.Column="8"/>
+                <Image Source="/images/Watcher_portrait.png" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3"/>
+                <Image Source="/Images/Artificer_portrait.png" Grid.Row="3" Grid.Column="10"/>
 
-
+            </Grid>
         </TabItem>
 
         <TabItem Header="Creature Search">
@@ -32,7 +70,7 @@
                     <RowDefinition Height="87*"/>
                     <RowDefinition Height="87*"/>
                 </Grid.RowDefinitions>
-
+                <!--<Images/>-->
                 <Button Content="Back" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FFDC0000" FontSize="20" Grid.ColumnSpan="2" Height="32" Width="74"/>
 
                 <TextBox x:Name="tbxSearch" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5" Background="#FFFFEA00" KeyUp="tbSearch_KeyUp" />
