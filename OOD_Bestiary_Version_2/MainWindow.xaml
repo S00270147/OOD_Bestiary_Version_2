@@ -1,0 +1,68 @@
+﻿<Window x:Class="OOD_Bestiary_Version_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOD_Bestiary_Version_2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <TabControl TabStripPlacement="Bottom">
+        <TabItem Header="Played Campaigns">
+
+
+        </TabItem>
+
+        <TabItem Header="Creature Search">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="43.5*"/>
+                    <RowDefinition Height="43.5*"/>
+                    <RowDefinition Height="87*"/>
+                    <RowDefinition Height="87*"/>
+                    <RowDefinition Height="87*"/>
+                    <RowDefinition Height="87*"/>
+                </Grid.RowDefinitions>
+
+                <Button Content="Back" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FFDC0000" FontSize="20" Grid.ColumnSpan="2" Height="32" Width="74"/>
+
+                <TextBox x:Name="tbxSearch" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5" Background="#FFFFEA00" KeyUp="tbSearch_KeyUp" />
+
+                <ComboBox x:Name="cbxCampaign" Grid.Column="0" Grid.Row="2" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2"/>
+
+                <ComboBox x:Name="cbxSpecies" Grid.Column="0" Grid.Row="3" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2"/>
+
+                <ComboBox x:Name="cbxNature" Grid.Column="0" Grid.Row="4" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2"/>
+
+
+                <!--<ListBox x:Name="lbxCreature" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10" Grid.ColumnSpan="2" Grid.RowSpan="6" SelectionChanged="lbxCreature_SelectionChanged"/>-->
+
+                <ListBox x:Name="lbxCreatures" Grid.Column="2" Grid.Row="1" Margin="10,10,10,10" Grid.ColumnSpan="2" Grid.RowSpan="5" SelectionChanged="lbxCreatures_SelectionChanged"/>
+
+                <Image Source="/Images/Pinklizard_portrait.png" Grid.Row="1" Grid.Column="4" Grid.RowSpan="2" Margin="0,16,0,15"/>
+                <!--<Image Source="/Images/SearchLogo.jpg" Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" Grid.RowSpan="0" />-->
+
+                <!--<Image Grid.Column="0" Grid.Row="1" gif:ImageBehavior.AnimatedSource="/Greenwalk.gif" />-->
+
+            </Grid>
+
+        </TabItem>
+
+        <TabItem Header="Character Info">
+
+
+        </TabItem>
+    </TabControl>
+
+
+   
+</Window>
