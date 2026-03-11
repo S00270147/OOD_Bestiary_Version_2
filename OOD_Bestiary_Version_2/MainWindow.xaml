@@ -6,11 +6,22 @@
         xmlns:local="clr-namespace:OOD_Bestiary_Version_2"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Foreground="White">
+    <Window.Background>
+        <ImageBrush ImageSource="/images/BG.png"/>
+    </Window.Background>
 
     <TabControl TabStripPlacement="Top">
-        <TabItem Header="Played Campaigns">
+        <TabItem Header="Played Campaigns" Background="White" Foreground="White" >
             <Grid>
+                <Canvas Grid.ColumnSpan="13" Grid.RowSpan="9" Opacity="0.5">
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0.125"/>
+                            <GradientStop Color="Transparent" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width=".4*"/>
@@ -37,24 +48,90 @@
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height=".25*"/>
                 </Grid.RowDefinitions>
-                
-                <!--<Images/>-->
-                <Image Source="/images/Survivor_portrait.png" Grid.Row="3" Grid.Column="2"/>
-                <Image Source="/Images/Rivulet_portrait.png" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
-                <Image Source="/Images/Monk_portrait.png" Grid.Row="3" Grid.Column="4"/>
-                <Image Source="/Images/Spearmaster_portrait.png" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3"/>
-                <Image Source="/Images/Hunter_portrait.png" Grid.Row="3" Grid.Column="6"/>
-                <Image Source="/Images/Saint_portrait.png" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3"/>
-                <Image Source="/Images/Gourmand_portrait.png" Grid.Row="3" Grid.Column="8"/>
-                <Image Source="/images/Watcher_portrait.png" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3"/>
-                <Image Source="/Images/Artificer_portrait.png" Grid.Row="3" Grid.Column="10"/>
+
+                <!--<Text>-->
+                <TextBlock Text="      -Select Played Played Campaigns-" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
+
+                <!--<Image Buttons>-->
+                <!--<Survivor>-->
+                <!--<Image Source="/images/Survivor_portrait.png" Grid.Row="3" Grid.Column="2"/>-->
+                <Button Content="" Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Foreground="White">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Survivor_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<Rivulet>-->
+                <!--<Image Source="/Images/Rivulet_portrait.png" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>-->
+                <Button Content="" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Rivulet_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<Monk>-->
+                <!--<Image Source="/Images/Monk_portrait.png" Grid.Row="3" Grid.Column="4"/>-->
+                <Button Content="" Grid.Row="3" Grid.Column="4" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Monk_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<SpearMaster>-->
+                <!--<Image Source="/Images/Spearmaster_portrait.png" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3"/>-->
+                <Button Content="" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Spearmaster_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<Hunter>-->
+                <!--<Image Source="/Images/Hunter_portrait.png" Grid.Row="3" Grid.Column="6"/>-->
+                <Button Content="" Grid.Row="3" Grid.Column="6" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Hunter_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<Saint>-->
+                <!--<Image Source="/Images/Saint_portrait.png" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3"/>-->
+                <Button Content="" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Saint_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<Gourmand>-->
+                <!--<Image Source="/Images/Gourmand_portrait.png" Grid.Row="3" Grid.Column="8"/>-->
+                <Button Content="" Grid.Row="3" Grid.Column="8" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Gourmand_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<Watcher>-->
+                <!--<Image Source="/images/Watcher_portrait.png" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3"/>-->
+                <Button Content="" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Watcher_portrait.png"/>
+                    </Button.Background>
+                </Button>
+                <!--<Artificer>-->
+                <!--<Image Source="/Images/Artificer_portrait.png" Grid.Row="3" Grid.Column="10"/>-->
+                <Button Content="" Grid.Row="3" Grid.Column="10" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/Artificer_portrait.png"/>
+                    </Button.Background>
+                </Button>
+
 
             </Grid>
         </TabItem>
 
-        <TabItem Header="Creature Search">
+        <TabItem Header="Creature Search" Background="Black">
 
             <Grid>
+                <Canvas Grid.ColumnSpan="13" Grid.RowSpan="6" Opacity="0.5">
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0.125"/>
+                            <GradientStop Color="Transparent" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="3*"/>
@@ -70,16 +147,20 @@
                     <RowDefinition Height="87*"/>
                     <RowDefinition Height="87*"/>
                 </Grid.RowDefinitions>
+
+                <!--<Text>-->
+                <TextBlock Text="       -Select Played Played Campaigns-" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold"/>
+
                 <!--<Images/>-->
-                <Button Content="Back" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FFDC0000" FontSize="20" Grid.ColumnSpan="2" Height="32" Width="74"/>
+                <Button Content="Back" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FFB70000" FontSize="20" Grid.ColumnSpan="2" Height="32" Width="74"/>
 
-                <TextBox x:Name="tbxSearch" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5" Background="#FFFFEA00" KeyUp="tbSearch_KeyUp" />
+                <TextBox x:Name="tbxSearch" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5" Background="#FFED76CD" KeyUp="tbSearch_KeyUp" />
 
-                <ComboBox x:Name="cbxCampaign" Grid.Column="0" Grid.Row="2" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2"/>
+                <ComboBox x:Name="cbxCampaign" Grid.Column="0" Grid.Row="2" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2" Foreground="White" BorderBrush="#7FFFFFFF" Background="#FFBF5FA5"/>
 
-                <ComboBox x:Name="cbxSpecies" Grid.Column="0" Grid.Row="3" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2"/>
+                <ComboBox x:Name="cbxSpecies" Grid.Column="0" Grid.Row="3" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2" BorderBrush="#7FFFFFFF" Background="#FF824271"/>
 
-                <ComboBox x:Name="cbxNature" Grid.Column="0" Grid.Row="4" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2"/>
+                <ComboBox x:Name="cbxNature" Grid.Column="0" Grid.Row="4" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2" BorderBrush="#7FFFFFFF" Background="#FF582F4C"/>
 
 
                 <!--<ListBox x:Name="lbxCreature" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10" Grid.ColumnSpan="2" Grid.RowSpan="6" SelectionChanged="lbxCreature_SelectionChanged"/>-->
@@ -95,12 +176,12 @@
 
         </TabItem>
 
-        <TabItem Header="Character Info">
+        <TabItem Header="Character Info" Background="Black">
 
 
         </TabItem>
     </TabControl>
 
 
-   
+
 </Window>
