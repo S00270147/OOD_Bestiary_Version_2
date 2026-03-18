@@ -12,7 +12,7 @@
     </Window.Background>
 
     <TabControl TabStripPlacement="Top">
-        <TabItem Header="Played Campaigns" Background="White" Foreground="White" >
+        <TabItem Header="Played Campaigns" Background="White">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -53,8 +53,7 @@
                 <!--<Image Buttons>-->
                 <!--<Survivor>-->
                 <Image Source="/images/Survivor_portrait.png" Grid.Row="3" Grid.Column="2"/>
-                <Button Grid.Row="3" Grid.Column="2" />
-                
+
                 <!-- With this valid Button definition: -->
                 <Button Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
@@ -120,13 +119,13 @@
                 </Button>
 
                 <!--<Text>-->
-                <TextBlock Text="      -Select Played Played Campaigns-" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
+                <TextBlock Text="-Select Played Campaigns-" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" FontSize="20" FontWeight="Bold" Margin="10,0,0,0" HorizontalAlignment="Center"/>
 
 
             </Grid>
         </TabItem>
 
-        <TabItem Header="Creature Search" Background="Black">
+        <TabItem Header="Creature Search" Background="White">
 
             <Grid>
                 
@@ -156,13 +155,17 @@
                 </Canvas>
 
                 <!--<Text>-->
-                <TextBlock Text="-Select Played Played Campaigns-" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold"/>
+                <TextBlock Text="-Select Played Campaigns-" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
 
-                <!--<Images/>-->
+                <!--<Images>-->
+                <Image Source="/images/mag-icon.png" Grid.Row="1" Grid.Column="0"/>
+
+                <!--<Search Bar>-->
                 <Button Content="Back" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FFB70000" FontSize="20" Grid.ColumnSpan="2" Height="32" Width="74"/>
 
                 <TextBox x:Name="tbxSearch" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5" Background="#FFED76CD" KeyUp="tbSearch_KeyUp" />
 
+                <!--<Filters>-->
                 <ComboBox x:Name="cbxCampaign" Grid.Column="0" Grid.Row="2" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2" Foreground="White" BorderBrush="#7FFFFFFF" Background="#FFBF5FA5"/>
 
                 <ComboBox x:Name="cbxSpecies" Grid.Column="0" Grid.Row="3" Height="25" Margin="10,0,10,0" SelectionChanged="cbx_SelectionChanged" Grid.ColumnSpan="2" BorderBrush="#7FFFFFFF" Background="#FF824271"/>
@@ -183,7 +186,7 @@
 
         </TabItem>
 
-        <TabItem Header="Character Info" Background="Black">
+        <TabItem Header="Character Info" Background="White">
 
 
         </TabItem>
