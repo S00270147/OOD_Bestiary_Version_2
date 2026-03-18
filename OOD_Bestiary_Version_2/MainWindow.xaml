@@ -14,6 +14,33 @@
     <TabControl TabStripPlacement="Top">
         <TabItem Header="Played Campaigns" Background="White" Foreground="White" >
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width=".4*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height=".25*"/>
+                </Grid.RowDefinitions>
+
                 <Canvas Grid.ColumnSpan="13" Grid.RowSpan="9" Opacity="0.5">
                     <Canvas.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -22,100 +49,78 @@
                         </LinearGradientBrush>
                     </Canvas.Background>
                 </Canvas>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height=".25*"/>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height=".25*"/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height=".25*"/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height=".25*"/>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height=".25*"/>
-                </Grid.RowDefinitions>
-
-                <!--<Text>-->
-                <TextBlock Text="      -Select Played Played Campaigns-" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
 
                 <!--<Image Buttons>-->
                 <!--<Survivor>-->
-                <!--<Image Source="/images/Survivor_portrait.png" Grid.Row="3" Grid.Column="2"/>-->
-                <Button Content="" Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Foreground="White">
+                <Image Source="/images/Survivor_portrait.png" Grid.Row="3" Grid.Column="2"/>
+                <Button Grid.Row="3" Grid.Column="2" />
+                
+                <!-- With this valid Button definition: -->
+                <Button Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Survivor_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<Rivulet>-->
-                <!--<Image Source="/Images/Rivulet_portrait.png" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>-->
+                <Image Source="/Images/Rivulet_portrait.png" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
                 <Button Content="" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Rivulet_portrait.png"/>
                     </Button.Background>
                 </Button>
                 <!--<Monk>-->
-                <!--<Image Source="/Images/Monk_portrait.png" Grid.Row="3" Grid.Column="4"/>-->
+                <Image Source="/Images/Monk_portrait.png" Grid.Row="3" Grid.Column="4"/>
                 <Button Content="" Grid.Row="3" Grid.Column="4" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Monk_portrait.png"/>
                     </Button.Background>
                 </Button>
                 <!--<SpearMaster>-->
-                <!--<Image Source="/Images/Spearmaster_portrait.png" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3"/>-->
+                <Image Source="/Images/Spearmaster_portrait.png" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3"/>
                 <Button Content="" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Spearmaster_portrait.png"/>
                     </Button.Background>
                 </Button>
                 <!--<Hunter>-->
-                <!--<Image Source="/Images/Hunter_portrait.png" Grid.Row="3" Grid.Column="6"/>-->
+                <Image Source="/Images/Hunter_portrait.png" Grid.Row="3" Grid.Column="6"/>
                 <Button Content="" Grid.Row="3" Grid.Column="6" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Hunter_portrait.png"/>
                     </Button.Background>
                 </Button>
                 <!--<Saint>-->
-                <!--<Image Source="/Images/Saint_portrait.png" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3"/>-->
+                <Image Source="/Images/Saint_portrait.png" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3"/>
                 <Button Content="" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Saint_portrait.png"/>
                     </Button.Background>
                 </Button>
                 <!--<Gourmand>-->
-                <!--<Image Source="/Images/Gourmand_portrait.png" Grid.Row="3" Grid.Column="8"/>-->
+                <Image Source="/Images/Gourmand_portrait.png" Grid.Row="3" Grid.Column="8"/>
                 <Button Content="" Grid.Row="3" Grid.Column="8" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Gourmand_portrait.png"/>
                     </Button.Background>
                 </Button>
                 <!--<Watcher>-->
-                <!--<Image Source="/images/Watcher_portrait.png" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3"/>-->
+                <Image Source="/images/Watcher_portrait.png" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3"/>
                 <Button Content="" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Watcher_portrait.png"/>
                     </Button.Background>
                 </Button>
                 <!--<Artificer>-->
-                <!--<Image Source="/Images/Artificer_portrait.png" Grid.Row="3" Grid.Column="10"/>-->
+                <Image Source="/Images/Artificer_portrait.png" Grid.Row="3" Grid.Column="10"/>
                 <Button Content="" Grid.Row="3" Grid.Column="10" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Artificer_portrait.png"/>
                     </Button.Background>
                 </Button>
+
+                <!--<Text>-->
+                <TextBlock Text="      -Select Played Played Campaigns-" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" FontSize="20" FontWeight="Bold" Margin="10,0,0,0"/>
 
 
             </Grid>
@@ -124,14 +129,7 @@
         <TabItem Header="Creature Search" Background="Black">
 
             <Grid>
-                <Canvas Grid.ColumnSpan="13" Grid.RowSpan="6" Opacity="0.5">
-                    <Canvas.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0.125"/>
-                            <GradientStop Color="Transparent" Offset="0"/>
-                        </LinearGradientBrush>
-                    </Canvas.Background>
-                </Canvas>
+                
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="3*"/>
@@ -148,8 +146,17 @@
                     <RowDefinition Height="87*"/>
                 </Grid.RowDefinitions>
 
+                <Canvas Grid.ColumnSpan="13" Grid.RowSpan="6" Opacity="0.5">
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0.125"/>
+                            <GradientStop Color="Transparent" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
+
                 <!--<Text>-->
-                <TextBlock Text="       -Select Played Played Campaigns-" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold"/>
+                <TextBlock Text="-Select Played Played Campaigns-" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold"/>
 
                 <!--<Images/>-->
                 <Button Content="Back" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FFB70000" FontSize="20" Grid.ColumnSpan="2" Height="32" Width="74"/>
