@@ -23,7 +23,7 @@ namespace OOD_Bestiary_Version_2
     {
         List<Creature> allCreatures = new List<Creature>();
         List<Creature> activeList = new List<Creature>();
-
+        private List<string> selectedCampaigns = new List<string>();
 
         public MainWindow()
         {
@@ -255,6 +255,127 @@ namespace OOD_Bestiary_Version_2
             CreatureProfile creatureProfile = new CreatureProfile();
 
             creatureProfile.ShowDialog(); //Second Window is Modal
+        }
+
+        //Played Campaigns
+        private void btnSelectSurvivor_Click(object sender, RoutedEventArgs e)
+        {
+            //True False Button, if true, Show at default opacity, if false, fade the portrait
+            if (btnSelectSurvivor.Opacity == 1)
+            {
+                btnSelectSurvivor.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectSurvivor.Opacity = 1;
+
+                //get name of charcter from button name
+                Button button = sender as Button;
+                string buttonName = button.Name; //btnSelectCampaignName
+                string campaignName = buttonName.Replace("btnSelect", ""); //CampaignName
+
+                selectedCampaigns.Add(campaignName);
+
+                //when have name add to list of selected campaigns
+
+
+            }
+        }
+
+        private void btnSelectMonk_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectMonk.Opacity == 1)
+            {
+                btnSelectMonk.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectMonk.Opacity = 1;
+            }
+        }
+
+        private void btnSelectHunter_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectHunter.Opacity == 1)
+            {
+                btnSelectHunter.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectHunter.Opacity = 1;
+            }
+        }
+
+        private void btnSelectGourmand_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectGourmand.Opacity == 1)
+            {
+                btnSelectGourmand.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectGourmand.Opacity = 1;
+            }
+        }
+
+        private void btnSelectArtificer_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectArtificer.Opacity == 1)
+            {
+                btnSelectArtificer.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectArtificer.Opacity = 1;
+            }
+        }
+
+        private void btnSelectRivulet_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectRivulet.Opacity == 1)
+            {
+                btnSelectRivulet.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectRivulet.Opacity = 1;
+            }
+        }
+
+        private void btnSelectSpearMaster_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectSpearMaster.Opacity == 1)
+            {
+                btnSelectSpearMaster.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectSpearMaster.Opacity = 1;
+            }
+        }
+
+        private void btnSelectSaint_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectSaint.Opacity == 1)
+            {
+                btnSelectSaint.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectSaint.Opacity = 1;
+            }
+        }
+
+        private void btnSelectWatcher_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnSelectWatcher.Opacity == 1)
+            {
+                btnSelectWatcher.Opacity = 0.5;
+            }
+            else
+            {
+                btnSelectWatcher.Opacity = 1;
+            }
         }
     }
 }

@@ -15,19 +15,19 @@
         <TabItem Header="Played Campaigns" Background="White">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width=".4*"/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="41*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="125*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="125*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="124*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="125*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="125*"/>
+                    <ColumnDefinition Width="16*"/>
+                    <ColumnDefinition Width="41*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height=".25*"/>
@@ -51,68 +51,66 @@
                 </Canvas>
 
                 <!--<Image Buttons>-->
+                
                 <!--<Survivor>-->
-                <Image Source="/images/Survivor_portrait.png" Grid.Row="3" Grid.Column="2"/>
-
                 <!-- With this valid Button definition: -->
-                <Button Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectSurvivor" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectSurvivor_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Survivor_portrait.png"/>
                     </Button.Background>
                 </Button>
-                
+
                 <!--<Rivulet>-->
-                <Image Source="/Images/Rivulet_portrait.png" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
-                <Button Content="" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectRivulet" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectRivulet_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Rivulet_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<Monk>-->
-                <Image Source="/Images/Monk_portrait.png" Grid.Row="3" Grid.Column="4"/>
-                <Button Content="" Grid.Row="3" Grid.Column="4" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectMonk" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="4" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectMonk_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Monk_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<SpearMaster>-->
-                <Image Source="/Images/Spearmaster_portrait.png" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3"/>
-                <Button Content="" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectSpearMaster" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectSpearMaster_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Spearmaster_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<Hunter>-->
-                <Image Source="/Images/Hunter_portrait.png" Grid.Row="3" Grid.Column="6"/>
-                <Button Content="" Grid.Row="3" Grid.Column="6" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectHunter" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="6" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectHunter_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Hunter_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<Saint>-->
-                <Image Source="/Images/Saint_portrait.png" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3"/>
-                <Button Content="" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectSaint" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectSaint_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Saint_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<Gourmand>-->
-                <Image Source="/Images/Gourmand_portrait.png" Grid.Row="3" Grid.Column="8"/>
-                <Button Content="" Grid.Row="3" Grid.Column="8" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectGourmand" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="8" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectGourmand_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Gourmand_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<Watcher>-->
-                <Image Source="/images/Watcher_portrait.png" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3"/>
-                <Button Content="" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectWatcher" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectWatcher_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Watcher_portrait.png"/>
                     </Button.Background>
                 </Button>
+                
                 <!--<Artificer>-->
-                <Image Source="/Images/Artificer_portrait.png" Grid.Row="3" Grid.Column="10"/>
-                <Button Content="" Grid.Row="3" Grid.Column="10" Height="106.494" Width="106.494" BorderBrush="{x:Null}">
+                <Button x:Name="btnSelectArtificer" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="10" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectArtificer_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Artificer_portrait.png"/>
                     </Button.Background>
@@ -128,7 +126,7 @@
         <TabItem Header="Creature Search" Background="White">
 
             <Grid>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="3*"/>
