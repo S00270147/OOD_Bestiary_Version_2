@@ -1,4 +1,5 @@
-﻿using OOD_Bestiary_Version_2;
+﻿using MaterialDesignColors;
+using OOD_Bestiary_Version_2;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -145,9 +146,18 @@ namespace OOD_Bestiary_Version_2
 
             //Setup a filtered list
             List<Creature> filteredList = new List<Creature>();
+            filteredList.Clear();
 
+            foreach (Creature c in allCreatures)
+            {
+                if (c.Camapigns.Contains(selectedCampaigns.ToString()))
+                    filteredList.Add(c);
 
-            //determine what is selected in 3 dropdowns and filter list based on that - can be one two or three filters at a time
+                lbxCreatures.ItemsSource = null;
+                lbxCreatures.ItemsSource = filteredList;
+            }
+
+            //determine what is selected in 3 dropdowns and filter list based on that
 
             // Get selected nature
             string selectedNature = cbxNature.SelectedItem as string;
@@ -273,11 +283,13 @@ namespace OOD_Bestiary_Version_2
                 Button button = sender as Button;
                 string buttonName = button.Name; //btnSelectCampaignName
                 string campaignName = buttonName.Replace("btnSelect", ""); //CampaignName
-
-                selectedCampaigns.Add(campaignName);
+                
 
                 //when have name add to list of selected campaigns
+                if (!selectedCampaigns.Contains(campaignName))
+                    selectedCampaigns.Add(campaignName);
 
+                
 
             }
         }
