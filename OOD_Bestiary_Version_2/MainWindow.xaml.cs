@@ -200,7 +200,6 @@ namespace OOD_Bestiary_Version_2
             activeList = filteredList;
 
             lbxCreatures.ItemsSource = null;
-
             lbxCreatures.ItemsSource = activeList;
         }
 
@@ -267,6 +266,12 @@ namespace OOD_Bestiary_Version_2
             creatureProfile.ShowDialog(); //Second Window is Modal
         }
 
+        //Used for the bellow Buttons
+        private void CampaignAddToList(object sender, RoutedEventArgs e)
+        {
+                
+        }
+
         //Played Campaigns
         private void btnSelectSurvivor_Click(object sender, RoutedEventArgs e)
         {
@@ -278,7 +283,9 @@ namespace OOD_Bestiary_Version_2
             else
             {
                 btnSelectSurvivor.Opacity = 1;
-
+                //Button button = sender as Button;
+                //CampaignAddToList(btnSelectSurvivor, e);
+                
                 //get name of charcter from button name
                 Button button = sender as Button;
                 string buttonName = button.Name; //btnSelectCampaignName
@@ -288,8 +295,6 @@ namespace OOD_Bestiary_Version_2
                 //when have name add to list of selected campaigns
                 if (!selectedCampaigns.Contains(campaignName))
                     selectedCampaigns.Add(campaignName);
-
-                
 
             }
         }
