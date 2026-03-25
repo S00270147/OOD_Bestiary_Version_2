@@ -123,7 +123,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Creature Search" Background="White">
+        <TabItem x:Name="tbitmCreatureSearch" Header="Creature Search" Background="White" Loaded="tbitmCreatureSearch_Loaded">
 
             <Grid>
 
