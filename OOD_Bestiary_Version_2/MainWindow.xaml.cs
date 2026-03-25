@@ -191,7 +191,6 @@ namespace OOD_Bestiary_Version_2
             activeList = filteredList;
 
             lbxCreatures.ItemsSource = null;
-
             lbxCreatures.ItemsSource = activeList;
         }
 
