@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOD_Bestiary_Version_2"
         mc:Ignorable="d"
-        Title="CharacterProfile" Height="450" Width="800">
+        Title="CharacterProfile" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <TextBlock x:Name="tblkCharacterName" HorizontalAlignment="Center" Margin="0,154,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="119" Width="709" FontSize="48"/>
+
     </Grid>
 </Window>

@@ -23,5 +23,10 @@ namespace OOD_Bestiary_Version_2
         {
             InitializeComponent();
         }
+
+        public CharacterProfile(string character) : this()
+        {
+            tblkCharacterName.Text = character;
+        }
     }
 }

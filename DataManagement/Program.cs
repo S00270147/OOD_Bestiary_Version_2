@@ -69,8 +69,24 @@ namespace DataManagement
                 db.Creatures.Add(C21);
                 db.Creatures.Add(C22);
 
+
+
+
+                Campaign cp1 = new Campaign() { CharacterName = "abc"};
+                db.Camapigns.Add(cp1);
+
+
+
                 //Saving the changes to the database
+                
+                
+                
+                
+                
                 db.SaveChanges();
+
+
+
 
             }
         }

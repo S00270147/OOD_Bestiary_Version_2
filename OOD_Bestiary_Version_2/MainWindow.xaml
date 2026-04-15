@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:OOD_Bestiary_Version_2"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Foreground="White">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Foreground="White"
+        WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="/images/BG.png"/>
     </Window.Background>
@@ -184,7 +185,7 @@
 
         </TabItem>
 
-        <TabItem Header="Character Info" Background="White">
+        <TabItem Header="Character Info" Background="White" GotFocus="TabItem_GotFocus">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="41*"/>
@@ -226,63 +227,63 @@
 
                 <!--<Survivor>-->
                 <!-- With this valid Button definition: -->
-                <Button x:Name="btnInfoSurvivor" Content="" Opacity = "1" Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoSurvivor_Click">
+                <Button x:Name="btnInfoSurvivor" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="2" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoSurvivor_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Survivor_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<Rivulet>-->
-                <Button x:Name="btnInfoRivulet" Content="" Opacity = "1" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoRivulet_Click">
+                <Button x:Name="btnInfoRivulet" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoRivulet_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Rivulet_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<Monk>-->
-                <Button x:Name="btnInfoMonk" Content="" Opacity = "1" Grid.Row="3" Grid.Column="4" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoMonk_Click">
+                <Button x:Name="btnInfoMonk" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="4" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoMonk_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Monk_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<SpearMaster>-->
-                <Button x:Name="btnInfoSpearMaster" Content="" Opacity = "1" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoSpearMaster_Click">
+                <Button x:Name="btnInfoSpearMaster" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoSpearMaster_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Spearmaster_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<Hunter>-->
-                <Button x:Name="btnInfoHunter" Content="" Opacity = "1" Grid.Row="3" Grid.Column="6" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoHunter_Click">
+                <Button x:Name="btnInfoHunter" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="6" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoHunter_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Hunter_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<Saint>-->
-                <Button x:Name="btnInfoSaint" Content="" Opacity = "1" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectSaint_Click">
+                <Button x:Name="btnInfoSaint" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectSaint_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Saint_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<Gourmand>-->
-                <Button x:Name="btnInfoGourmand" Content="" Opacity = "1" Grid.Row="3" Grid.Column="8" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoGourmand_Click">
+                <Button x:Name="btnInfoGourmand" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="8" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoGourmand_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Gourmand_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<Watcher>-->
-                <Button x:Name="btnInfoWatcher" Content="" Opacity = "1" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoWatcher_Click">
+                <Button x:Name="btnInfoWatcher" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoWatcher_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Watcher_portrait.png"/>
                     </Button.Background>
                 </Button>
 
                 <!--<Artificer>-->
-                <Button x:Name="btnInfoArtificer" Content="" Opacity = "1" Grid.Row="3" Grid.Column="10" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoArtificer_Click">
+                <Button x:Name="btnInfoArtificer" Content="" Opacity = "0.5" Grid.Row="3" Grid.Column="10" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoArtificer_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Artificer_portrait.png"/>
                     </Button.Background>

@@ -320,12 +320,14 @@ namespace OOD_Bestiary_Version_2
         //|----------------------------|
         private void btnInfoSurvivor_Click(object sender, RoutedEventArgs e)
         {
-
+            CharacterProfile cpWindow = new CharacterProfile("Survivor");
+            cpWindow.ShowDialog();
         }
 
         private void btnInfoMonk_Click(object sender, RoutedEventArgs e)
         {
-
+            CharacterProfile cpWindow = new CharacterProfile("Monk");
+            cpWindow.ShowDialog();
         }
 
         private void btnInfoHunter_Click(object sender, RoutedEventArgs e)
@@ -356,6 +358,33 @@ namespace OOD_Bestiary_Version_2
         private void btnInfoWatcher_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        
+
+        private void TabItem_GotFocus(object sender, RoutedEventArgs e)
+        {
+            //Display selected list names
+
+            //string display = "";
+            //foreach (var item in selectedCampaigns)
+            //{
+            //    display += item;
+            //    display += ", ";
+            //}
+
+            //MessageBox.Show(display);
+
+            //get names of buttons
+            string character = selectedCampaigns[0];
+
+            //change opacity
+            if (character == "Survivor")
+                btnInfoSurvivor.Opacity = 1; 
+
+            //add else for deselection - or other solution
+
+            //code for 1st three
         }
     }
 }
