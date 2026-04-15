@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Bestiary_Version_2
 {
+    //Creatue is the same as enemy
     public class Creature
     {
         public int CreatureId { get; set; }
@@ -32,8 +33,9 @@ namespace OOD_Bestiary_Version_2
 
     public class  CreatureData : DbContext
     {
-        public CreatureData() : base("CreatureData") { }
+        public CreatureData() : base("CreatureData_260415") { }
 
         public DbSet<Creature> Creatures { get; set; }
+        public DbSet<Campaign> Camapigns { get; set; }
     }
 }
