@@ -17,6 +17,7 @@ namespace OOD_Bestiary_Version_2
         List<string> selectedCampaigns = new List<string>();
         List<Creature> CampaignCreature = new List<Creature>();
         string character = "";
+        //string creature = "";
 
         public MainWindow()
         {

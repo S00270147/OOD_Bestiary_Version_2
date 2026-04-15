@@ -11,8 +11,39 @@
     <Window.Background>
         <ImageBrush ImageSource="/images/BG.png"/>
     </Window.Background>
-    
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
+
+        <Canvas Grid.ColumnSpan="5" Grid.RowSpan="5" Opacity="0.5">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.125"/>
+                    <GradientStop Color="Transparent" Offset="0"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <TextBlock Name="tblkDescription" Canvas.Left="45" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="192" Height="210" Width="435" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White"/>
+            <Image Name="imgCreature" Height="163" Canvas.Left="589" Canvas.Top="159" Width="169"/>
+        </Canvas>
+
+
+        <TextBlock x:Name="tblkCreatureName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="110" Width="511" FontSize="48" Foreground="White" Grid.Row="1" Grid.ColumnSpan="4" Margin="45,0,0,0"/>
+
+        <Button Content="Back" Background="#FFB70000" FontSize="20" Foreground="White" FontFamily="Segoe UI" Margin="18,13,18,10"/>
+
+
     </Grid>
 </Window>

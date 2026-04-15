@@ -23,5 +23,23 @@ namespace OOD_Bestiary_Version_2
         {
             InitializeComponent();
         }
+
+        public CreatureProfile(string creature) : this()
+        {
+            CreatureData db = new CreatureData();
+
+            var query = from c in db.Creatures
+                        where c.SubjectName == creature
+                        select c;
+
+            Creature selectedCreature = query.FirstOrDefault();
+
+            string path = "\\..\\.." + selectedCreature.Portrait;
+            BitmapImage bitmap = new BitmapImage(new Uri(path, UriKind.Relative));
+
+            tblkCreatureName.Text = selectedCreature.SubjectName;
+            tblkDescription.Text = selectedCreature.Description;
+            imgCreature.Source = bitmap;
+        }
     }
 }
