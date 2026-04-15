@@ -16,6 +16,7 @@ namespace OOD_Bestiary_Version_2
         List<Creature> activeList = new List<Creature>();
         List<string> selectedCampaigns = new List<string>();
         List<Creature> CampaignCreature = new List<Creature>();
+        string character = "";
 
         public MainWindow()
         {
@@ -228,7 +229,7 @@ namespace OOD_Bestiary_Version_2
         }
 
         ///-----------------------------------------------------------------------------------------------------\
-        //|Logic for all the Campaigns Buttons, all buttons on the Played Campains Screen will call this method.|
+        //|Logic for all the Campaigns Buttons, all buttons on the Played Campaigns Screen will call this method.|
         //\-----------------------------------------------------------------------------------------------------/
         public void PlayedCampaignsButton(object sender, RoutedEventArgs e)
         {
@@ -315,24 +316,41 @@ namespace OOD_Bestiary_Version_2
             lbxCreatures.ItemsSource = CampaignCreature;
         }
 
+        ///---------------------------------------------------------------------------------------------------------\
+        //|Logic for all the Character Info Buttons, all buttons on the Character Info Screen will call this method.|
+        //\---------------------------------------------------------------------------------------------------------/
+        public void CharacterInfoButton(object sender, RoutedEventArgs e)
+        {
+            //get name of charcter from button name
+            Button infoButton = sender as Button;
+            string infoButtonName = infoButton.Name; //btnInfoCampaignName
+            string infoCampaignName = infoButtonName.Replace("btnInfo", "");//CampaignName
+            //If true, on click open page, if false, do nothing
+            if (infoButton.Opacity == 1)
+            {
+                character = infoCampaignName;
+                CharacterProfile campWindow = new CharacterProfile(character);
+                campWindow.ShowDialog();
+            }
+        }
+
+
         //|----------------------------|
-        //      Played Campaigns
+        //|   Character Info Buttons   |
         //|----------------------------|
         private void btnInfoSurvivor_Click(object sender, RoutedEventArgs e)
         {
-            CharacterProfile cpWindow = new CharacterProfile("Survivor");
-            cpWindow.ShowDialog();
+            CharacterInfoButton(sender, e);
         }
 
         private void btnInfoMonk_Click(object sender, RoutedEventArgs e)
         {
-            CharacterProfile cpWindow = new CharacterProfile("Monk");
-            cpWindow.ShowDialog();
+            CharacterInfoButton(sender, e);
         }
 
         private void btnInfoHunter_Click(object sender, RoutedEventArgs e)
         {
-
+            CharacterInfoButton(sender, e);
         }
 
         private void btnInfoGourmand_Click(object sender, RoutedEventArgs e)
@@ -376,15 +394,36 @@ namespace OOD_Bestiary_Version_2
             //MessageBox.Show(display);
 
             //get names of buttons
-            string character = selectedCampaigns[0];
+            //string character = selectedCampaigns[0];
 
             //change opacity
-            if (character == "Survivor")
-                btnInfoSurvivor.Opacity = 1; 
+            if (selectedCampaigns.Contains("Survivor"))
+                btnInfoSurvivor.Opacity = 1;
+            else //(character != "Survivor")
+                btnInfoSurvivor.Opacity = 0.5;
+
+
+
+            if (selectedCampaigns.Contains("Monk"))
+                btnInfoMonk.Opacity = 1;
+            else //(character != "Monk")
+                btnInfoMonk.Opacity = 0.5;
+
+
+
+            if (selectedCampaigns.Contains("Hunter"))
+                btnInfoHunter.Opacity = 1;
+            else //(character != "Hunter")
+                btnInfoHunter.Opacity = 0.5;
 
             //add else for deselection - or other solution
 
             //code for 1st three
+        }
+
+        private void btnInfoSaint_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

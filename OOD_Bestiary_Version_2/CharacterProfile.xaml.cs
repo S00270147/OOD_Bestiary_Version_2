@@ -26,7 +26,20 @@ namespace OOD_Bestiary_Version_2
 
         public CharacterProfile(string character) : this()
         {
-            tblkCharacterName.Text = character;
+            CreatureData db = new CreatureData();
+
+            var query = from c in db.Camapigns
+                        where c.CharacterName == character
+                        select c;
+
+            Campaign selectedCampaign = query.FirstOrDefault();
+
+            string path = "\\..\\.." + selectedCampaign.Portrait;
+            BitmapImage bitmap = new BitmapImage(new Uri(path, UriKind.Relative));
+
+            tblkCharacterName.Text = selectedCampaign.CharacterName;
+            tblkDescription.Text = selectedCampaign.Description;
+            imgChar.Source = bitmap;
         }
     }
 }

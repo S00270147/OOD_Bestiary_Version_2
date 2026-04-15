@@ -262,7 +262,7 @@
                 </Button>
 
                 <!--<Saint>-->
-                <Button x:Name="btnInfoSaint" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnSelectSaint_Click">
+                <Button x:Name="btnInfoSaint" Content="" Opacity = "0.5" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="3" Height="106.494" Width="106.494" BorderBrush="{x:Null}" Click="btnInfoSaint_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/images/Saint_portrait.png"/>
                     </Button.Background>

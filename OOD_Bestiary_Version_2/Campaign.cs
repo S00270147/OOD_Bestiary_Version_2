@@ -16,6 +16,7 @@ namespace OOD_Bestiary_Version_2
         public string Speed { get; set; }
         //public string Creatures { get; set; }
         public string Diet { get; set; }
+        public string FoodPips { get; set; }
         public string Description { get; set; }
 
         public List<Creature> Creatures { get; set; }
