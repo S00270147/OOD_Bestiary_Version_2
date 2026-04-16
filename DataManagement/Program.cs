@@ -90,12 +90,12 @@ namespace DataManagement
                 db.Camapigns.Add(Camp1);
                 db.Camapigns.Add(Camp2);
                 db.Camapigns.Add(Camp3);
-                //db.Camapigns.Add(Camp4);
-                //db.Camapigns.Add(Camp5);
-                //db.Camapigns.Add(Camp6);
-                //db.Camapigns.Add(Camp7);
-                //db.Camapigns.Add(Camp8);
-                //db.Camapigns.Add(Camp9);
+                db.Camapigns.Add(Camp4);
+                db.Camapigns.Add(Camp5);
+                db.Camapigns.Add(Camp6);
+                db.Camapigns.Add(Camp7);
+                db.Camapigns.Add(Camp8);
+                db.Camapigns.Add(Camp9);
                 Console.WriteLine("Characters added to database");
 
 

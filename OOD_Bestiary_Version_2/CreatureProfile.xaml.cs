@@ -34,12 +34,12 @@ namespace OOD_Bestiary_Version_2
 
             Creature selectedCreature = query.FirstOrDefault();
 
-            string path = "\\..\\.." + selectedCreature.Portrait;
-            BitmapImage bitmap = new BitmapImage(new Uri(path, UriKind.Relative));
+            //string path = "\\..\\.." + selectedCreature.Portrait;
+            //BitmapImage bitmap = new BitmapImage(new Uri(path, UriKind.Relative));
 
             tblkCreatureName.Text = selectedCreature.SubjectName;
             tblkDescription.Text = selectedCreature.Description;
-            imgCreature.Source = bitmap;
+            //imgCreature.Source = bitmap;
         }
     }
 }

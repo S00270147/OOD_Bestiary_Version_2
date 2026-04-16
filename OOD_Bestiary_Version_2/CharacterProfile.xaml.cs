@@ -34,12 +34,15 @@ namespace OOD_Bestiary_Version_2
 
             Campaign selectedCampaign = query.FirstOrDefault();
 
-            string path = "\\..\\.." + selectedCampaign.Portrait;
-            BitmapImage bitmap = new BitmapImage(new Uri(path, UriKind.Relative));
+            //string path = "\\..\\.." + selectedCampaign.Portrait;
+            //BitmapImage bitmap = new BitmapImage(new Uri(path, UriKind.Relative));
 
             tblkCharacterName.Text = selectedCampaign.CharacterName;
             tblkDescription.Text = selectedCampaign.Description;
-            imgChar.Source = bitmap;
+            tblkSpeed.Text = selectedCampaign.Speed;
+            tblkDiet.Text = selectedCampaign.Diet;
+            tblkFoodPips.Text = selectedCampaign.FoodPips;
+            //imgChar.Source = bitmap;
         }
     }
 }

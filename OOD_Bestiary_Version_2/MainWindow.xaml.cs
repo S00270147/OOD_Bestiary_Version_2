@@ -227,6 +227,8 @@ namespace OOD_Bestiary_Version_2
             CreatureProfile creatureProfile = new CreatureProfile();
 
             creatureProfile.ShowDialog(); //Second Window is Modal
+
+
         }
 
         ///-----------------------------------------------------------------------------------------------------\
@@ -356,27 +358,32 @@ namespace OOD_Bestiary_Version_2
 
         private void btnInfoGourmand_Click(object sender, RoutedEventArgs e)
         {
-
+            CharacterInfoButton(sender, e);
         }
 
         private void btnInfoArtificer_Click(object sender, RoutedEventArgs e)
         {
-
+            CharacterInfoButton(sender, e);
         }
 
         private void btnInfoRivulet_Click(object sender, RoutedEventArgs e)
         {
-
+            CharacterInfoButton(sender, e);
         }
 
         private void btnInfoSpearMaster_Click(object sender, RoutedEventArgs e)
         {
+            CharacterInfoButton(sender, e);
+        }
 
+        private void btnInfoSaint_Click(object sender, RoutedEventArgs e)
+        {
+            CharacterInfoButton(sender, e);
         }
 
         private void btnInfoWatcher_Click(object sender, RoutedEventArgs e)
         {
-
+            CharacterInfoButton(sender, e);
         }
 
         
@@ -417,14 +424,53 @@ namespace OOD_Bestiary_Version_2
             else //(character != "Hunter")
                 btnInfoHunter.Opacity = 0.5;
 
+
+
+            if (selectedCampaigns.Contains("Artificer"))
+                btnInfoArtificer.Opacity = 1;
+            else //(character != "Artificer")
+                btnInfoArtificer.Opacity = 0.5;
+
+
+
+            if (selectedCampaigns.Contains("Gourmand"))
+                btnInfoGourmand.Opacity = 1;
+            else //(character != "Gourmand")
+                btnInfoGourmand.Opacity = 0.5;
+
+
+
+            if (selectedCampaigns.Contains("Rivulet"))
+                btnInfoRivulet.Opacity = 1;
+            else //(character != "Rivulet")
+                btnInfoRivulet.Opacity = 0.5;
+
+
+
+            if (selectedCampaigns.Contains("SpearMaster"))
+                btnInfoSpearMaster.Opacity = 1;
+            else //(character != "SpearMaster")
+                btnInfoSpearMaster.Opacity = 0.5;
+
+
+
+            if (selectedCampaigns.Contains("Saint"))
+                btnInfoSaint.Opacity = 1;
+            else //(character != "Saint")
+                btnInfoSaint.Opacity = 0.5;
+
+
+
+            if (selectedCampaigns.Contains("Watcher"))
+                btnInfoWatcher.Opacity = 1;
+            else //(character != "Watcher")
+                btnInfoWatcher.Opacity = 0.5;
+
             //add else for deselection - or other solution
 
             //code for 1st three
         }
 
-        private void btnInfoSaint_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
