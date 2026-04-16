@@ -42,8 +42,6 @@
 
         <TextBlock x:Name="tblkCreatureName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="110" Width="511" FontSize="48" Foreground="White" Grid.Row="1" Grid.ColumnSpan="4" Margin="45,0,0,0"/>
 
-        <Button Content="Back" Background="#FFB70000" FontSize="20" Foreground="White" FontFamily="Segoe UI" Margin="18,13,18,10"/>
-
 
     </Grid>
 </Window>

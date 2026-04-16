@@ -12,6 +12,7 @@ namespace OOD_Bestiary_Version_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        CreatureData db = new CreatureData();
         List<Creature> allCreatures = new List<Creature>();
         List<Creature> activeList = new List<Creature>();
         List<string> selectedCampaigns = new List<string>();
@@ -222,11 +223,13 @@ namespace OOD_Bestiary_Version_2
 
         public void lbxCreatures_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Creature selectedCreature = lbxCreatures.SelectedItem as Creature;
+           Creature selectedCreature = lbxCreatures.SelectedItem as Creature;
 
-            CreatureProfile creatureProfile = new CreatureProfile();
-
-            creatureProfile.ShowDialog(); //Second Window is Modal
+            if (selectedCreature != null)
+            {
+                CreatureProfile creatureProfile = new CreatureProfile(selectedCreature.SubjectName);
+                creatureProfile.ShowDialog(); //Second Window is Modal
+            }
 
 
         }
@@ -317,6 +320,8 @@ namespace OOD_Bestiary_Version_2
         {
             lbxCreatures.ClearValue(ItemsControl.ItemsSourceProperty);
             lbxCreatures.ItemsSource = CampaignCreature;
+
+            lbxCreatures.ItemsSource = db.Creatures.ToList();
         }
 
         ///---------------------------------------------------------------------------------------------------------\
