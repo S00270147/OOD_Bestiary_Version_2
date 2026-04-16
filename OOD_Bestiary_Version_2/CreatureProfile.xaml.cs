@@ -39,6 +39,11 @@ namespace OOD_Bestiary_Version_2
 
             tblkCreatureName.Text = selectedCreature.SubjectName;
             tblkDescription.Text = selectedCreature.Description;
+            tblkHp.Text = selectedCreature.HP.ToString();
+            tblkSpeed.Text = selectedCreature.Speed.ToString();
+            tblkNature.Text = selectedCreature.Nature;
+            tblkHabbitat.Text = selectedCreature.Habitat;
+            tblkDangerLevel.Text = selectedCreature.DangerLevel.ToString();
             //imgCreature.Source = bitmap;
         }
     }
